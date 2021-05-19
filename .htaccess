@@ -1,4 +1,4 @@
 # Allow script access from any domain
-Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Origin "https://moodle.szgmu.ru/"
 Header set Access-Control-Allow-Headers "origin, x-requested-with, content-type"
 Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
