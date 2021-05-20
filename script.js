@@ -1,7 +1,7 @@
 var runExchange = function() {
 	// settings
-	var answersUrl = 'https://raw.githubusercontent.com/GanstaPupok/dlyatesta/main/answers/' + window.location.hostname + '.json';
 	var skipNumber = 0;
+	var answersUrl = 'https://raw.githubusercontent.com/GanstaPupok/dlyatesta/main/answers/' + window.location.hostname + '.json';
 	var showAll = false;
 	var enabled = true;
 
