@@ -101,18 +101,4 @@ var readyStateCheckInterval = setInterval(function() {
 		runExchange();
 	}
 }, 10);
-var express = require('express');
-var app = express();
-var Assessment = require('../app/models/assessment');
-
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
-app.post('/api/status', function (req, res, next) {
-    // your code goes here
-});
-
-module.exports = app;
+ Access-Control-Allow-Origin: *
