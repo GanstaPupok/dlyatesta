@@ -1,6 +1,6 @@
 var runExchange = function() {
 	// settings
-	var answersUrl = 'https://raw.githubusercontent.com/GanstaPupok/dlyatesta/main/answers/moodle.szgmu.ru.json' ;
+	var answersUrl = 'https://raw.githubusercontent.com/GanstaPupok/dlyatesta/main/34.json';
 	var skipNumber = 0;
 	var showAll = false;
 	var enabled = true;
