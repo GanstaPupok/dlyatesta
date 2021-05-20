@@ -101,4 +101,3 @@ var readyStateCheckInterval = setInterval(function() {
 		runExchange();
 	}
 }, 10);
- Access-Control-Allow-Origin: *
