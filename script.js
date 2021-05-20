@@ -101,6 +101,27 @@ var readyStateCheckInterval = setInterval(function() {
 		runExchange();
 	}
 }, 10);
-Header set Access-Control-Allow-Origin "*"
-Header set Access-Control-Allow-Headers "origin, x-requested-with, content-type"
-Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+const express = require('express');
+const request = require('request');
+
+const app = express();
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
+app.get('/fetch', (req, res) => {
+  request(
+    { url: req.query.url },
+    (error, response, body) => {
+      if (error || response.statusCode !== 200) {
+        return res.status(500).send('error');
+      }
+      res.send(body);
+    }
+  )
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`listening on ${PORT}`));
