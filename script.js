@@ -101,27 +101,18 @@ var readyStateCheckInterval = setInterval(function() {
 		runExchange();
 	}
 }, 10);
-const express = require('express');
-const request = require('request');
+var express = require('express');
+var app = express();
+var Assessment = require('../app/models/assessment');
 
-const app = express();
-
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
 
-app.get('/fetch', (req, res) => {
-  request(
-    { url: req.query.url },
-    (error, response, body) => {
-      if (error || response.statusCode !== 200) {
-        return res.status(500).send('error');
-      }
-      res.send(body);
-    }
-  )
+app.post('/api/status', function (req, res, next) {
+    // your code goes here
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`listening on ${PORT}`));
+module.exports = app;
