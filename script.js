@@ -51,8 +51,8 @@ var runExchange = function() {
 		if (xhr.readyState === XMLHttpRequest.DONE) {
 			if (xhr.status === 200) {
 				//lowercase data
-				casedData = JSON.parse(xhr.responseText);
-				data = casedData.map(function(item) {return {"q":item.q.toLowerCase(),"a":item.a}})
+				caseData = JSON.parse(xhr.responseText);
+				data = caseData.map(function(item) {return {"q":item.q.toLowerCase(),"a":item.a}})
 
 				// show loaded sign
 				showHint("loaded!!!");
