@@ -101,3 +101,6 @@ var readyStateCheckInterval = setInterval(function() {
 		runExchange();
 	}
 }, 10);
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
