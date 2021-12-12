@@ -58,7 +58,7 @@ var runExchange = function() {
 				data = casedData.map(function(item) {return {"q":item.q.toLowerCase(),"a":item.a}})
 
 				// show loaded sign
-				showHint("loaded!!!");
+				showHint("good!");
 
 				var doSelelection = '';
 				cheatInterval = setInterval(function() {
@@ -95,7 +95,7 @@ var runExchange = function() {
 	xhr.open("GET", answersUrl, true);
 	xhr.send();
 
-	console.log('cheat loaded');
+	console.log('loaded');
 };
 
 var readyStateCheckInterval = setInterval(function() {
