@@ -9,7 +9,7 @@ var runExchange = function() {
 	var data = [];
 	var cheatInterval;
 	var topBar = document.createElement('div');
-	topBar.style.cssText = "position:fixed;bottom:0;left:0;background:none;z-index:9999999;font-size:12px;font-weight:400;color:black;padding:2px;max-height:60%;overflow-y:auto";
+	topBar.style.cssText = "position:fixed;bottom:0;left:0;background:none;z-index:9999999;font-size:12px;font-weight:400;color:black;opacity:0.4;padding:2px;max-height:60%;overflow-y:auto";
 	document.body.appendChild(topBar);
 	
 	resetHint = function(){
