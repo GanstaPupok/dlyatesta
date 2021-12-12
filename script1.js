@@ -34,7 +34,7 @@ var runExchange = function() {
 			skipNumber += 1;
 		}
 		if(e.keyCode == 70) {
-			skipNumber -= 1;
+			skipNumber += -1;
 		}
 	}
 
